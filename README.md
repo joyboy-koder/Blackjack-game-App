@@ -21,6 +21,7 @@ This project demonstrates basic game logic, random number generation, and intera
 - Tailwind CSS styling  
 - Basic game state management
 
----
+ ## 🌐 Live Demo
+ > https://joyboy-koder.github.io/Blackjack-game-App/
 
 
