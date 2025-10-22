@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <title>Blackjack game</title>
+
+    <style>
+        .font-gothic {
+            font-family: 'UnifrakturCook', 'Old English Text MT', serif;
+        }
+    
+        /* Smooth fade animations */
+        .fade-in {
+            animation: fadeIn 2s ease forwards;
+        }
+    
+        .fade-out {
+            animation: fadeOut 2s ease forwards;
+        }
+    
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+    
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+    
+            to {
+                opacity: 0;
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen mx-auto container bg-green-700">
+
+    <!-- INTRO SCREEN -->
+    <div id="intro" class="fixed inset-0 flex items-center justify-center bg-black z-50">
+        <span id="introLogo"
+            class="font-gothic text-[20rem] text-white/90 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)] opacity-0">J</span>
+    </div>
+
+    <div id="main" class="hidden min-h-screen flex flex-col justify-center items-center space-y-8  text-gray-100 mx-auto container bg-green-700">
+    <h1 class="text-6xl font-bold text-yellow-500">Blackjack</h1>
+
+    <p id="message-el" class="italic text-3xl font-bold">Want to play a card?</p>
+    <p id="cards-el" class="text-3xl font-bold">Cards:</p>
+    <p id="sum-el" class="text-3xl font-bold">Sum:</p>
+
+    <button id="start-btn" onclick="startGame()" class="px-12 py-3 bg-yellow-500 rounded text-green-700 text-3xl font-bold transition duration-500 hover:bg-yellow-200 shadow-lg">START GAME</button>
+
+    <button id="newCard-btn" onclick="newCard()" class="px-12 py-3 bg-yellow-500 rounded text-green-700 text-3xl font-bold transition duration-500 hover:bg-yellow-200 shadow-lg">NEW CARD</button>
+
+    <p id="player-el" class="text-3xl font-bold"></p>
+
+    
+    <p class="text-yellow-500 text-lg">Quick rule: Get as close to 21 as possible without going over.</p>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
